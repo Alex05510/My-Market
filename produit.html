@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produits.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MY MARKET</title>
+
+</head>
+<body>
+    <div class="sidebar2">
+        <div class="logo">
+            <a href="index.html">
+             <img src="assets/icons/icons/logo-my-market.png" alt="logo my market">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><img src="assets/icons/icons/file-text.png" alt="logo"> 
+                    <a href="#" title="vers la page  comptabilité">comptabilité</a></li>
+
+                <li><img src="assets/icons/icons/shopping-bag.png" alt="logo"> 
+                    <a href="produit.html" title="vers la page produits">Produits</a></li>
+
+                <li><img src="assets/icons/icons/truck.png" alt="logo"> 
+                    <a href="#" title="vers page fournisseur">Fournisseurs</a></li>
+
+                <li><img src="assets/icons/icons/archive.png" alt="logo"> 
+                    <a href="#" title="vers page commande">Commandes</a></li>
+                    
+                <li><img src="assets/icons/icons/settings.png" alt="logo"> 
+                    <a href="#" title="vers page parametre">Paramètres</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="title">
+            <h1>Ajouter un produit</h1>
+            
+            <button class="back"><a href="index.html" title="vers home page" class="home"><img src="assets/icons/icons/back-arrow.png" alt="back" >Retours</a></button>
+        </div>
+        <div class="container">
+            <div class="formulaire">
+                <label for="reference" class="ref">Référence</label>
+                <input type="text" id="ref">
+            </div>
+            <div class="formulaire">
+                <label for="Catégorie" class="ref">Catégorie</label>
+                <select name="categorie" id="ref">
+                    <option value="" >Choisissez une categorie</option>
+                    <option value="Téléphones" >Téléphones</option>
+                    <option value="Télévisions" >Télévisions</option>
+                    <option value="Audio" >Audio</option>
+                    <option value="Appareils photo" >Appareils photo</option>
+                    <option value="Ordinateurs de bureau" >Ordinateurs de bureau</option>
+                    <option value="Ordinateurs portables" >Ordinateurs portables</option>
+                    <option value="Tablettes" >Tablettes</option>
+                    <option value="Tablettes" >Tablettes</option>
+                </select>
+            </div>
+                <div class="formulaire">
+                    <label for="libelle" class="ref">Libellé</label>
+                    <input type="text" id="ref">
+                </div>
+                <div class="formulaire">
+                    <label for="fournisseur" class="ref">Fournisseur</label>
+                    <select name="fournisseur" id="ref">
+                        <option value="Choisissez un fournisseur">Choisissez un fournisseur</option>
+                        <option value="Darty">Darty</option>
+                        <option value="Boulanger">Boulanger</option>
+                    </select>
+                </div>
+                <div class="formulaire">
+                    <label for="prix de vente" class="ref">Prix de vente conseillé</label>
+                    <input type="number" id="ref">
+                </div>
+                <div class="formulaire">
+                    <label for="photo" class="ref">Photos</label>
+                    <input type="file" id="ref">
+                </div>
+        </div>
+            <div class="container-secondary">
+                <div class="form">
+                <label for="description" class="ref">Description</label>
+                <textarea name="description" id="ref" rows="9" col="20"></textarea>
+            </div>
+            <div class="check">
+                <input type="checkbox">
+                <label for="en-stock" id="stock">En stock</label>
+            </div>
+            <button  type="button" class="save" id="save"><img src="assets/icons/icons/save.png" alt="save">Enregistrer</button>
+        </div>
+
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

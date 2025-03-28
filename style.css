@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    height: auto;
+}
+
+.sidebar {
+    width: 250px;
+    height: auto;
+    background-color: #333;
+    padding: 0rem;
+}
+/* pour la page produit*/
+.sidebar2 {
+    width: 250px;
+    background-color: #333;
+    padding: 0rem;
+    height: 100vh;
+}
+.sidebar2 h2 {
+    text-align: center;
+}
+.sidebar2 nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar2 ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/*****************************/
+
+
+nav {
+    margin-left: 3rem;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+h2 {
+    margin-bottom: 4rem;
+}
+span {
+    color: red;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    margin-bottom: 3rem;
+}
+
+.sidebar ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    margin: 0px;
+    background-color: #f0515a;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+}
+
+.logo {
+    margin-bottom: 10rem;
+}
+
+.searchBar {
+    margin-top: 5rem;
+    gap: 5rem;
+    width: 47%;
+}
+
+
+button#open-modal-creer {
+    background-color: #f0515a;
+    margin-left: 31%;
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+/*.submit {
+    margin-left: 13rem;
+    background-color: #f0515a;
+    width: 16%;
+    padding-left: 1rem;
+}*/
+a.ajouter {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    width: 56%;
+    padding: 0.5rem;
+}
+
+#form-products {
+    gap: 5rem;
+}
+
+#form-products ul {
+    display: flex;
+    gap: 10rem;
+    margin-left: 3rem;
+    margin-top: 6rem;
+}
+
+
+
+#list-produit {
+    margin-left: 3rem;
+}
+
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #f0515a;
+    padding: 1rem;
+}
+main {
+    width: 100%;
+}
+
+.title button {
+    background-color: #f0515a;
+    color: #fff;
+    border: #fff solid;
+    width: 8%;
+}
+
+table {
+    margin-left: 11rem;
+    margin-top: 5rem;
+    width: 77%;
+    text-align: center;
+}
+
+
+  img {
+    margin: 10px 0;
+  }
+
+
+  table {
+    width: 80%; 
+    border-collapse: collapse; 
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left; 
+  }
+  
+  th {
+    border: 1px solid black;
+    background-color: #bdb9b9;
+  }
+
+  tr {
+    border: solid 1px;
+}
+
+
+label.modif {
+    line-height: 1rem;
+    display: flex;
+    margin-left: 40.6%;
+}
+select#create-categorie {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+label.modif {
+    line-height: 1rem;
+    display: flex;
+    margin-left: 40.6%;
+}
+#create-libelle,#edit-reference,#edit-categorie,#edit-stock,#edit-prix,#create-prix  {
+    margin-bottom: 2rem;
+}
+
+.modal-content h2 {
+    border-bottom: solid 2px;
+}

@@ -1,0 +1,46 @@
+.container {
+    margin-left: 25%;
+    margin-top: 15%;
+}
+
+.container-secondary {
+    position: absolute;
+    top: 37%;
+    left: 65%;
+}
+
+select#ref, input#ref {
+    margin-bottom: 2rem;
+    width: 30%;
+}
+
+.ref {
+    display: flex;
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    background-color: #f0515a;
+    color: #fff;
+    border: none;
+}
+
+a.home {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+button.back {
+    padding: 0 1rem;
+}
+
+button.save {
+    margin-top: 9rem;
+}
+

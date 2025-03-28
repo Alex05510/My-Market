@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal/modal.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>MY MARKET</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="index.html">
+             <img src="assets/icons/icons/logo-my-market.png" alt="logo my market">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><img src="assets/icons/icons/file-text.png" alt="logo"> 
+                    <a href="#" title="vers la page  comptabilité">comptabilité</a></li>
+
+                <li><img src="assets/icons/icons/shopping-bag.png" alt="logo"> 
+                    <a href="produit.html" title="vers la page produits">Produits</a></li>
+
+                <li><img src="assets/icons/icons/truck.png" alt="logo"> 
+                    <a href="#" title="vers page fournisseur">Fournisseurs</a></li>
+
+                <li><img src="assets/icons/icons/archive.png" alt="logo"> 
+                    <a href="#" title="vers page commande">Commandes</a></li>
+                    
+                <li><img src="assets/icons/icons/settings.png" alt="logo"> 
+                    <a href="#" title="vers page parametre">Paramètres</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <header>
+            <h1>Listes des Produits</h1>
+            <div class="searchBar">
+                <input type="text" id="search" placeholder="Rechercher">
+                <button id="open-modal-creer" onclick="ouvrirModalCreer()" class="ajouter">+ Ajouter</button>  
+            </div>
+        </header>
+        <div id="form-products">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Référence</th>
+                    <th>Catégorie</th>
+                    <th>Libellé</th>
+                    <th>Prix</th>
+                    <th>En Stock</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="list-produit">
+                 
+                </tbody>
+              </table>
+<!-- La modale des produits quand on clique sur voir -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fermerModale()">x</span>
+      <h2 id="modal-titre">Détails du Produit</h2>
+      <img id="modal-photo" src="" alt="Image du produit" style="width: 200px; height: auto;">
+      <p id="modal-description"></p>
+      <p><strong>Référence :</strong> <span id="modal-reference"></span></p>
+      <p><strong>Catégorie :</strong> <span id="modal-categorie"></span></p>
+      <p><strong>Prix :</strong> <span id="modal-prix"></span></p>
+      <p><strong>Stock :</strong> <span id="modal-stock"></span></p>
+    </div>
+  </div>
+
+  <!-- La modale pour modifier un produit -->
+  <div id="modal-modifier" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fermerModalModifier()">x</span>
+        <h2>Modifier le produit</h2>
+        <form id="form-modifier">
+            <div>
+                <label for="edit-reference" class="modif">Référence :</label>
+                <input type="text" id="edit-reference" name="reference" class="in">
+            </div>
+            <div>
+                <label for="edit-categorie" class="modif">Catégorie :</label>
+                <input type="text" id="edit-categorie" name="categorie" class="in">
+            </div>
+            <div>
+                <label for="edit-libelle" class="modif">Libellé :</label>
+                <input type="text" id="edit-libelle" name="libelle" class="in">
+            </div>
+                <label for="edit-prix" class="modif">Prix :</label>
+                <input type="number" id="edit-prix" name="prix" step="0.01" class="in">
+            <div>
+                <label for="edit-stock" class="modif">En stock :</label>
+                <input type="checkbox" id="edit-stock" name="stock" class="in">
+            </div>
+            <div>
+                <label for="edit-description" class="modif">Description :</label>
+                <textarea id="edit-description" name="description"></textarea>
+            </div>
+            <button type="button" onclick="enregistrerModifications()" class="enregistrer">Enregistrer</button>
+        </form>
+    </div>
+</div>
+<!-- Modale pour crée un produit-->
+<div id="modal-creer" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fermerModalCreer()">x</span>
+        <h2>Créer un produit</h2>
+        <form id="form-creer">
+            <div>
+                <label for="create-reference" class="modif">Référence :</label>
+                <input type="text" id="create-reference" name="reference" class="in" required placeholder="Référence">
+            </div>
+            <div>
+                <select name="create-categorie" id="create-categorie">
+                    <option value="" >Choisissez une categorie</option>
+                    <option value="Téléphones" >Téléphones</option>
+                    <option value="Télévisions" >Télévisions</option>
+                    <option value="Audio" >Audio</option>
+                    <option value="Appareils photo" >Appareils photo</option>
+                    <option value="Ordinateurs de bureau" >Ordinateurs de bureau</option>
+                    <option value="Ordinateurs portables" >Ordinateurs portables</option>
+                    <option value="Tablettes" >Tablettes</option>
+                    <option value="Tablettes" >Tablettes</option>
+                </select>
+            </div>
+            <div>
+                <label for="create-libelle" class="modif">Libellé :</label>
+                <input type="text" id="create-libelle" name="libelle" class="in" required placeholder="Libellé">
+            </div>
+            <div>
+                <label for="create-prix" class="modif">Prix :</label>
+                <input type="number" id="create-prix" name="prix" step="0.01" class="in" required placeholder="€">
+            </div>
+            <div>
+                <label for="create-stock" class="modif">En stock :</label>
+                <input type="checkbox" id="create-stock" name="stock" class="in" placeholder="Stock">
+            </div>
+            <div>
+                <label for="create-description" class="modif">Description :</label>
+                <textarea id="create-description" name="description" class="in"></textarea>
+            </div>
+            
+            <button type="button" onclick="ajouterProduit()" class="enregistrer">Créer</button>
+            <div id="error" style="display: none;"></div>
+        </form>
+    </div>
+</div>
+
+
+    
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
